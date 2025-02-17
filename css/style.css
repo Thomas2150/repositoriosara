@@ -84,14 +84,6 @@ body {
   left: 0;
 }
 
-/* Tamaño mas reducido de imagen de portada para moviles */
-
-@media (max-width: 768px) {
-  .text-overlay {
-    height: 150px;
-  }
-}
-
 
 /* Centrado del contenido */
 
