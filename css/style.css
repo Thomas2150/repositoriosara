@@ -1,0 +1,336 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(../Multimedia/bground-pattern.jpg);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+  padding: 10px;
+}
+
+/* BOTON WHATSAPP FLOTANTE */
+
+.whatsapp {
+  position:fixed;
+  width:60px;
+  height:60px;
+  bottom:40px;
+  right:40px;
+  background-color:#25d366;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  font-size:30px;
+  z-index:100;
+}
+
+.whatsapp-icon {
+  margin-top:13px;
+}
+
+/* LOGO NAVBAR */
+
+.logo-img {
+  height: 120px; /* Aumenta el tamaño del logo */
+  width: 130px;
+  object-fit: contain; /* Asegura que el logo no se deforme */
+}
+
+/* CONTENEDOR */
+
+.container {
+  max-width: 1000px;
+  background: white;
+  padding: 0px;
+  border-radius: 20px;
+}
+
+.container {
+  box-shadow: 0 0 20px 5px black;
+}
+
+/* RADIO NAVBAR */
+
+.navbar {
+  border-radius: 10px;
+}
+
+/* PORTADA */
+
+.img-header {
+  width: 100%;
+}
+
+.portada {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  overflow: hidden;
+}
+
+.img-header {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen para que se adapte al contenedor */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Tamaño mas reducido de imagen de portada para moviles */
+
+@media (max-width: 768px) {
+  .text-overlay {
+    height: 150px;
+  }
+}
+
+
+/* Centrado del contenido */
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* Agrega un poco de contraste al texto */
+}
+
+/* Estilo del texto y logo */
+
+.bienvenidos {
+  font-family: Montserrat;
+  font-size: 3rem; /* Tamaño inicial del texto */
+  margin: 0;
+  position: relative;
+  top: 200px;
+}
+
+.logo {
+  width: 600px; /* Tamaño inicial del logo */
+}
+
+/* Responsividad */
+
+@media (max-width: 768px) {
+  .bienvenidos {
+      font-size: 3rem;
+  }
+
+  .logo {
+      width: 700px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bienvenidos {
+      font-size: 2rem;
+      padding-bottom: 70px;
+  }
+
+  .logo {
+      width: 380px;
+  }
+}
+
+/* QUIENES SOMOS */
+
+.tipo-qs {
+  font-family: Lustria;
+  padding-top: 20px;
+  font-size: 50px;
+  color: rgb(46, 63, 11);
+  text-align: center; }
+
+.text-qs {
+  color: black;
+  font-family: Montserrat;
+  padding: 1rem;
+  text-align: center;
+}
+
+.img-qs {
+  width: 100%;
+  padding: 15px;
+}
+
+.seccion {
+  padding: 35px 20px;
+  text-align: center;
+  opacity: 0; /* Inicialmente invisible */
+  transform: translateY(50px); /* Aparece desde abajo */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.seccion.visible {
+  opacity: 1;
+  transform: translateY(0); /* Se posiciona en su lugar */
+}
+
+.quienes-somos {
+  background-color: #f4f4f4;
+}
+
+/* SECCION CABAÑAS */
+
+.section-cabañas {
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  background-color: white; }
+
+.h2-cabañas {
+  font-family: Lustria;
+  color: rgb(46, 63, 11);
+  font-size: 50px;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.grid-cabañas {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Ajuste para pantallas pequeñas */
+  width: 100%; /* Aseguramos que el contenedor tenga un ancho completo */
+  padding: 10px;
+}
+
+@media (min-width: 1024px) {
+  .grid-cabañas {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas por fila en pantallas grandes */
+  }
+}
+
+.card-cabañas {
+  border: 1px solid #ccc; /* Borde temporal para ver las tarjetas */
+  padding: 10px; /* Espacio dentro de cada tarjeta */
+  background-color: #f9f9f9; /* Color de fondo para las tarjetas */
+  background-color: #25d366;
+  border-radius: 30px;
+}
+
+
+/*  */
+
+.img-cabañas {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.text-card {
+  padding: 10px;
+}
+
+/* SISTEMA DE RESERVAS */
+
+.h2-reservas {
+  font-family: Lustria;
+  color: rgb(46, 63, 11);
+  font-size: 50px;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.text-reservas {
+  color: black;
+  font-family: Montserrat;
+  text-align: center;
+  font-size: 17px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* PREGUNTAS FRECUENTES */
+
+.h2-preg {
+  font-family: Lustria;
+  color: rgb(46, 63, 11);
+  font-size: 50px;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.section-preguntas {
+  padding: 2rem;
+}
+
+/* MAPA UBICACION */
+
+.mapa-ubi {
+  color: rgb(255, 255, 255);
+  background-color: rgb(46, 63, 11);
+}
+
+.mapa-ubi p {
+  text-align: center;
+}
+
+.mapa {
+  height: 100%;
+  width: 80%;
+  padding-bottom: 20px;
+}
+
+.h2-ubi {
+  font-family: Lustria;
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+/* FOTO FINAL */
+
+.img-footer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.img-footer img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: rgb(46, 63, 11);
+  padding-top: 50px; }
+footer .contenedor3 {
+  padding-bottom: 5%;
+  color: white;
+}
+footer .titulo1 {
+  font-family: Lustria;  
+  text-align: center;
+  background-color: none; }
+footer .copy {
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 10px; }
+footer .titulo-seccion, footer .copy {
+  color: rgb(255, 255, 255); }
+footer i {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  padding: 0 20px; }
+footer i:hover {
+  transform: scale(1.5);
+  transition: all 1s; }
+footer .redes-sociales {
+  display: flex;
+  justify-content: center; }
